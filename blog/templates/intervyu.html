@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uz">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Intervyu</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row navbar">
+            <div class="col-12 col-md-6 col-sm-6 navbar-icon"><a href="./bir.html">Azimjon's Blog</a></div>
+            <div class="col-12 col-md-6 col-sm-6 navbar-link">
+                <div><a href="/blog/about/">About</a></div>
+                <div><a href="/blog/">Blog</a></div>
+                <div><a href="https://t.me/Uxla_1">Telegram Account</a></div>
+            </div>
+        </div>
+        <div class="row blog">
+            <div class="col-12">
+                <h1>Intervyu</h1>
+            </div>
+        </div>
+        <div class="row main">
+            <div class="col-12 col-md-6 col-sm-6 main-card1">
+                {%for i in intervyu%}
+                <p>{{i.sana}}</p>
+                <div class="main-card1-link">
+                    <h6>{{i.sana}}</h6> <h5>{{i.sarlavha}}</h5>
+                    <iframe src="{{i.link}}" frameborder="0" allowfullscreen="allowfullscreen" height="315" width="100%"></iframe>
+                </div>
+                {%endfor%}
+            </div>
+            <div class="col-12 col-md-6 col-sm-6 main-card2">
+                <h4>NEWSLETTER</h4>
+                <p>Subscribe to <a href="#">@codialuz</a> telegram channel where I share interesting & useful stuff.</p>
+
+            </div>
+        </div>
+        <div class="row footer">
+            <p>© 2021 azimjon.com</p>
+        </div>
+    </div>
+</body>
+</html>
